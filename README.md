@@ -1,2 +1,2 @@
-# generalization-through-retrieval
-Generalization of deep neural networks by using the information of nearest training examples
+# retrieval-augmentation-nn
+Retrieval Augmentation to improve Robustness and Interpretability of Deep Neural Networks
