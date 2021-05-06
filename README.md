@@ -1,7 +1,5 @@
 # retrieval-augmentation-nn
-Retrieval Augmentation to Improve Robustness and Interpretability of Deep Neural Networks
-
-Code described in the paper: https://arxiv.org/abs/2102.13030
+Code described in the paper Retrieval Augmentation for Deep Neural Networks: https://arxiv.org/abs/2102.13030
 
 If you find our work useful in your research, please consider citing the paper:
 
