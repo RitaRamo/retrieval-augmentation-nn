@@ -5,7 +5,7 @@ If you find our work useful in your research, please consider citing the paper:
 
 ```
 @misc{ramos2021retrieval,
-      title={Retrieval Augmentation to Improve Robustness and Interpretability of Deep Neural Networks}, 
+      title={Retrieval Augmentation for Deep Neural Networks}, 
       author={Rita Parada Ramos and Patrícia Pereira and Helena Moniz and Joao Paulo Carvalho and Bruno Martins},
       year={2021},
       eprint={2102.13030},
