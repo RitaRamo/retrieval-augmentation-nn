@@ -1,19 +1,35 @@
-# retrieval-augmentation-nn
-Code described in the paper Retrieval Augmentation for Deep Neural Networks: https://arxiv.org/abs/2102.13030
+# Retrieval Augmentation for Deep Neural Networks
 
-If you find our work useful in your research, please consider citing the paper:
+Code for the paper [Retrieval Augmentation for Deep Neural Networks](https://ieeexplore.ieee.org/document/9533978)
+
+# Introduction
+
+The most common methodology in deep learning involves the supervised training of a neural network with input-output pairs, so as to minimize a given loss function. In general, deep neural networks predict the output conditioned solely on the current input or, more recently, leveraging an attention mechanism that focuses only on parts of the input as well. This leaves the rest of the labeled examples unused for the current prediction, either during training or inference.
+
+In this work, we leverage similar examples in the training set to improve the performance and interpretability of deep neural networks, both at training and testing time. We propose an approach that retrieves the nearest training example to the one being processed and uses the corresponding target example (i) as auxiliary context to the input (e.g. combining the input together with the retrieved target), or (ii) to guide the attention mechanism of the neural network.
+
+We show that the retrieved target can be easily incorporated in an LSTM model, making use of its initial memory state.
+
+In general, previous studies have given little consideration to the initialization of the LSTM's memory state. Typically, the memory state is initialized simply with a vector of zeros. Even when it is initialized with the current context (e.g., the input image for captioning tasks), it is just initialized in the same way as the LSTM hidden state: with a simple affine transformation of the same context. Our approach takes advantage of the initial memory state by encoding auxiliary information from training examples. We also present a new multi-level attention method that attends to the inputs and to the target of the nearest example.
+
+We evaluate the proposed approach on image captioning and sentiment analysis. In brief, image captioning involves generating a textual description of an image. The dominant framework involves using a CNN as an encoder to represent the image, and passes this representation to a RNN decoder that generates the respective caption, combined with neural-attention. In turn, sentiment analysis aims to classify the sentiment of an input text. Within neural methods, RNNs and CNNs are commonly used for sentiment analysis, recently also combining attention mechanisms.
+
+Our general aim is to demonstrate the effectiveness of the proposed approach, which can also be easily integrated in other neural models, by applying it to standard methods for two different tasks (i.e., generation and classification) and by using a retrieval mechanism with different modalities (i.e., image and text retrieval).
+
+# Citation
 
 ```
-@misc{ramos2021retrieval,
-      title={Retrieval Augmentation for Deep Neural Networks}, 
-      author={Rita Parada Ramos and Patrícia Pereira and Helena Moniz and Joao Paulo Carvalho and Bruno Martins},
-      year={2021},
-      eprint={2102.13030},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
+@inproceedings{ramos2021retrieval,
+  title={Retrieval Augmentation for Deep Neural Networks},
+  author={Ramos, Rita Parada and Pereira, Patr{\'\i}cia and Moniz, Helena and Carvalho, Joao Paulo and Martins, Bruno},
+  booktitle={2021 International Joint Conference on Neural Networks (IJCNN)},
+  pages={1--8},
+  year={2021},
+  organization={IEEE}
 }
+
 ```
 
-Our code was adapted from:
-- Image Captioning task: https://github.com/sgrvinod/a-PyTorch-Tutorial-to-Image-Captioning
-- Sentiment Analysis task: https://github.com/bentrevett/pytorch-sentiment-analysis/blob/master/2%20-%20Upgraded%20Sentiment%20Analysis.ipynb
+# Baselines
+
+Our Retrieval Augmentation approach was implemented in the following [Image Captioning](https://github.com/sgrvinod/a-PyTorch-Tutorial-to-Image-Captioning) baseline and [Sentiment Analysis](https://github.com/bentrevett/pytorch-sentiment-analysis/blob/master/2%20-%20Upgraded%20Sentiment%20Analysis.ipynb) baseline.
