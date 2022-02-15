@@ -12,6 +12,4 @@ Code for the paper [Retrieval Augmentation for Deep Neural Networks](https://iee
 }
 ```
 
-Our code was adapted from:
-- Image Captioning task: https://github.com/sgrvinod/a-PyTorch-Tutorial-to-Image-Captioning
-- Sentiment Analysis task: https://github.com/bentrevett/pytorch-sentiment-analysis/blob/master/2%20-%20Upgraded%20Sentiment%20Analysis.ipynb
+Our Retrieval Augmentation approach was implemented in the following [Image Captioning Baseline](https://github.com/sgrvinod/a-PyTorch-Tutorial-to-Image-Captioning)and [Sentiment Analysis Baseline](https://github.com/bentrevett/pytorch-sentiment-analysis/blob/master/2%20-%20Upgraded%20Sentiment%20Analysis.ipynb).
