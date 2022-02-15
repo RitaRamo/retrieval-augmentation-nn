@@ -8,9 +8,7 @@ The most common methodology in deep learning involves the supervised training of
 
 In this work, we leverage similar examples in the training set to improve the performance and interpretability of deep neural networks, both at training and testing time. We propose an approach that retrieves the nearest training example to the one being processed and uses the corresponding target example (i) as auxiliary context to the input (e.g. combining the input together with the retrieved target), or (ii) to guide the attention mechanism of the neural network.
 
-We show that the retrieved target can be easily incorporated in an LSTM model, making use of its initial memory state.
-
-In general, previous studies have given little consideration to the initialization of the LSTM's memory state. Typically, the memory state is initialized simply with a vector of zeros. Even when it is initialized with the current context (e.g., the input image for captioning tasks), it is just initialized in the same way as the LSTM hidden state: with a simple affine transformation of the same context. Our approach takes advantage of the initial memory state by encoding auxiliary information from training examples. We also present a new multi-level attention method that attends to the inputs and to the target of the nearest example.
+We show that the retrieved target can be easily incorporated in an LSTM model, making use of its initial memory state. We also present a new multi-level attention method that attends to the inputs and to the target of the nearest example.
 
 We evaluate the proposed approach on image captioning and sentiment analysis. In brief, image captioning involves generating a textual description of an image. The dominant framework involves using a CNN as an encoder to represent the image, and passes this representation to a RNN decoder that generates the respective caption, combined with neural-attention. In turn, sentiment analysis aims to classify the sentiment of an input text. Within neural methods, RNNs and CNNs are commonly used for sentiment analysis, recently also combining attention mechanisms.
 
