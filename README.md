@@ -1,16 +1,14 @@
-# retrieval-augmentation-nn
-Code described in the paper Retrieval Augmentation for Deep Neural Networks: https://arxiv.org/abs/2102.13030
-
-If you find our work useful in your research, please consider citing the paper:
+# Retrieval Augmentation for Deep Neural Networks
+Code for the paper [Retrieval Augmentation for Deep Neural Networks](https://ieeexplore.ieee.org/document/9533978):
 
 ```
-@misc{ramos2021retrieval,
-      title={Retrieval Augmentation for Deep Neural Networks}, 
-      author={Rita Parada Ramos and Patrícia Pereira and Helena Moniz and Joao Paulo Carvalho and Bruno Martins},
-      year={2021},
-      eprint={2102.13030},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
+@inproceedings{ramos2021retrieval,
+  title={Retrieval Augmentation for Deep Neural Networks},
+  author={Ramos, Rita Parada and Pereira, Patr{\'\i}cia and Moniz, Helena and Carvalho, Joao Paulo and Martins, Bruno},
+  booktitle={2021 International Joint Conference on Neural Networks (IJCNN)},
+  pages={1--8},
+  year={2021},
+  organization={IEEE}
 }
 ```
 
