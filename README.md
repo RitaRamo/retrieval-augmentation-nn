@@ -2,7 +2,7 @@
 
 Code for the paper [Retrieval Augmentation for Deep Neural Networks](https://ieeexplore.ieee.org/document/9533978)
 
-# Introduction
+# Overview
 
 The most common methodology in deep learning involves the supervised training of a neural network with input-output pairs, so as to minimize a given loss function. In general, deep neural networks predict the output conditioned solely on the current input or, more recently, leveraging an attention mechanism that focuses only on parts of the input as well. This leaves the rest of the labeled examples unused for the current prediction, either during training or inference.
 
